@@ -1,10 +1,27 @@
 #p1{
-background-color : #3498db;
+	background-color : #3498db;
 }
 #p2{
-background-color : white;
+	background-color : white;
 }
 #p3{
-background-color : #c0392b;
-position : center;
+	background-color : #c0392b;
+}
+#img{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+@media  (max-width: 480px) {
+    /* Le code pour les mobiles ici */
+   
+
+	img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+    	max-width: 100%;
+    		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
 }
