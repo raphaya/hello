@@ -11,11 +11,11 @@
 <body>
 
 <div id="header">
-	<img id="img" src="image/logo-iut.jpg" alt="Calais" style="width:300px;" position='center'>
-	<h1>M4105C : Un super module</h1>
+	<img id="logo" src="image/logo-iut.jpg" alt="Calais" >
+	<h1 id="superTitre">M4105C : Un super module</h1>
 </div>
-<div id="p1">
-	<h3>1. Structure générale</h3>
+<div id="p1" >
+	<h1>1. Structure générale</h1>
 	<p>
 	La création d'une page web au format HTML doit respecté des standards spécifés par
 	le W3C. Nous utiliserons tout au long de ce module HTML5 qui est la dernière révision
@@ -35,9 +35,9 @@
 	</p>
 </div>
 
-<div id="p2">
+<div>
 	<h3>2. STOP : versioning </h3>
-	<p>Un projet informatique du fait de l'évolution des langages, des utilisateurs, des
+	<p id="p2" >Un projet informatique du fait de l'évolution des langages, des utilisateurs, des
 	terminaux... n'est jamais vraiment fgé, il est souvent amené à être modifé.
 	La gestion des versions a plusieurs avantages, elle permet de garder une trace des
 	fchiers modifés, de mettre facilement en ligne les fchiers qui ont été modifés, de
@@ -64,12 +64,29 @@
 </div>
 
 
-<div>
+<div id="footer">
 <p>footer :
 04/05/2016
 Module M4105C
 </p>
 </div>
 
+
+	<script>
+	  $(window).resize(function() {
+		$('h1, h2').css('z-index', 'auto'); //auto reflow
+	  });
+	</script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="jquery.fittext.js"></script>
+	<script>
+	   $("#p1").fitText(); // basique
+	   $("#p2").fitText(1.2); // compression proportionnelle
+	   $("#footer").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' }); // compression avec taille max et taille min
+	</script>
+
+
 </body>
 </html>
+
